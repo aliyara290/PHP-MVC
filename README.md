@@ -16,8 +16,6 @@ The project uses PostgreSQL for database interaction and provides a simple examp
 2. [Folder Structure](#folder-structure)
 3. [How It Works](#how-it-works)
 4. [Features](#features)
-5. [Requirements](#requirements)
-6. [License](#license)
 
 ---
 
