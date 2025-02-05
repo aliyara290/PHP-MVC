@@ -69,9 +69,6 @@ The following is the basic structure of the project:
 │   │   └──    
 │   ├── views/                 
 │   │   └──       
-│   ├── config/                 
-│   │   ├── config.php 
-│   │   └── routes.php 
 │   ├── core/                  
 │   │   ├── Controllers.php     
 │   │   ├── Models.php         
@@ -83,6 +80,9 @@ The following is the basic structure of the project:
 │   │   └── View.php      
 │   └── routes/  
 │       └── web.php 
+├── config/                 
+│   │   ├── config.php 
+│   │   └── routes.php 
 ├── public/
 │   ├── assets/ 
 │   │   ├── css/ 
