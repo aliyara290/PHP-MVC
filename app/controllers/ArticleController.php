@@ -1,23 +1,30 @@
 <?php 
 namespace App\Controllers;
-use App\Models\Article;
+use App\Core\Validator;
+use App\Core\Session;
 use App\Core\View;
+use App\Core\Controller;
 
-class ArticleController {
+class ArticleController extends Controller {
     private $articleModel;
     public function __construct()
     {
-        $this->articleModel = new Article();
+        $this->articleModel = $this->model("Article");
     }
-    public function showAllArticles() {
-        $data = $this->articleModel->readAll();
-        View::render('home', ["articles" => $data]);
+  
+    public function readByCondition() {
+        $id = Validator::sanitize($_GET["id"]);
+        $this->articleModel->setArticleId($id);
+        $data = $this->articleModel->readByCondition();
+        if(!is_numeric($id)) {
+            $this->redirect("/");
+        } elseif(!$data) {
+            $this->redirect("/");
+        }
+        View::render('article', [
+            "article" => $data,
+            "userName" => Session::get("user_name")
+        ]);
         return $data;
     }
-    // public function readByCondition() {
-    //     $data = $this->articleModel->readByCondition();
-    //     var_dump($data);
-    //     View::render('home', $data);
-    //     return $data;
-    // }
 }
