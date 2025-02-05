@@ -1,31 +1,22 @@
 <?php 
 namespace App\Controllers;
+use App\Models\Article;
 use App\Core\View;
+use App\Core\Session;
+use App\Core\Controller;
 
-class HomeController {
-    public function home() {
-        require __DIR__ . "/../views/front/home.twig";
+class HomeController extends Controller {
+    private $articleModel;
+    public function __construct()
+    {
+        $this->articleModel = $this->model("Article");
     }
-    public function signIn() {
-        $data = [
-            'title' => 'Welcome to Home Page',
-            'username' => 'Yara'
-        ];
-        View::render('sign-in', $data);
-    }
-
-    public function signUp() {
-        $data = [
-            'title' => 'Welcome to Home Page',
-            'username' => 'Yara'
-        ];
-        View::render('sign-up', $data);
-    }
-    public function create() {
-        $data = [
-            'title' => 'Welcome to Home Page',
-            'username' => 'Yara'
-        ];
-        View::render('create', $data);
+    public function showAllArticles() {
+        $data = $this->articleModel->readAll();
+        View::render('home', [
+            "articles" => $data,
+            "userName" => Session::get("user_name")
+        ]);
+        return $data;
     }
 }
