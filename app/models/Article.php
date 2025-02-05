@@ -4,8 +4,8 @@ use App\Core\Crud;
 
 class Article {
 
-    private string $table = "article";
-    private int $articleId = 2;
+    private string $table = "articles";
+    private int $articleId;
 
     public function setArticleId($id) {
         $this->articleId = $id;
