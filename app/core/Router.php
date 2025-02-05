@@ -2,9 +2,7 @@
 
 namespace App\Core;
 
-use App\Core\Controller;
-
-class Router extends Controller
+class Router
 {
     private array $routes = [];
 
