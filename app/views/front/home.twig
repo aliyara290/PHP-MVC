@@ -1,23 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dev.to Clone</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gray-100 text-gray-900">
-    
-    <nav class="bg-white shadow-md p-4 flex justify-between items-center">
-        <a href="#" class="text-xl font-bold text-blue-600">DEV.BLOG</a>
-        <div class="space-x-4">
-            <a href="/" class="text-gray-700 hover:text-blue-600">Home</a>
-            <a href="/create" class="text-gray-700 hover:text-blue-600">Write</a>
-            <a href="/sign-in" class="text-gray-700 hover:text-blue-600">Login</a>
-        </div>
-    </nav>
-    
-    <header class="bg-blue-500 text-white text-center py-12">
+{% extends "./Layouts/Base.twig"%}
+
+ {% block content %}
+ <header class="bg-blue-500 text-white text-center py-12">
         <h1 class="text-4xl font-bold">Share Your Knowledge with the World</h1>
         <p class="mt-2 text-lg">Join a community of developers writing about the latest in tech</p>
     </header>
@@ -35,9 +19,4 @@
     {% endfor %}
         </div>
     </main>
-
-    <footer class="bg-white text-center p-4 mt-8 shadow-md">
-        <p class="text-gray-600">&copy; 2024 DevClone. All Rights Reserved.</p>
-    </footer>
-</body>
-</html>
+ {% endblock %}
