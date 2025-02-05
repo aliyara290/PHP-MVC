@@ -23,7 +23,6 @@ class Database {
         try {
             $this->pdo = new PDO("pgsql:host=$db_host;dbname=$db_name;port=$port", $username, $password);
             $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            echo "success ";
         } catch (PDOException $e) {
             echo "failed to connect: " . $e->getMessage(); 
         }
