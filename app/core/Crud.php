@@ -75,7 +75,6 @@ class Crud
     public static function readAll($table)
     {
         $sql = "select * from $table";
-        echo $sql;
         try {
             $stmt = self::$pdo->prepare($sql);
             $stmt->execute();
