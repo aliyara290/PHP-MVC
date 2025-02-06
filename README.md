@@ -77,17 +77,15 @@ The following is the basic structure of the project:
 │   │   ├── Session.php         
 │   │   ├── Model.php         
 │   │   ├── Validator.php         
-│   │   └── View.php      
-│   └── routes/  
-│       └── web.php 
+│   |   └── View.php      
 ├── config/                 
 │   │   ├── config.php 
-│   │   └── routes.php 
-├── public/
-│   ├── assets/ 
+│   │   └── routes.php
+├── assets/ 
 │   │   ├── css/ 
 │   │   ├── js/
 │   │   └── images/  
+├── public/
 │   ├── .htaccess 
 │   └── index.php 
 ├── .env
