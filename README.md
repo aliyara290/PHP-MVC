@@ -71,8 +71,7 @@ The following is the basic structure of the project:
 │   │   └──       
 │   ├── core/                  
 │   │   ├── Controllers.php     
-│   │   ├── Models.php         
-│   │   ├── Database.php         
+│   │   ├── Models.php                 
 │   │   ├── Security.php         
 │   │   ├── Session.php         
 │   │   ├── Model.php         
@@ -80,7 +79,7 @@ The following is the basic structure of the project:
 │   |   └── View.php      
 ├── config/                 
 │   │   ├── config.php 
-│   │   └── routes.php
+│   │   └── Database.php
 ├── assets/ 
 │   │   ├── css/ 
 │   │   ├── js/
